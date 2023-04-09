@@ -3,19 +3,20 @@ package HolocaustoH;
 public class Main {
 
 	public static void main(String[] args) {
-		//Posicion personaje
-		Posicion posInicial = new Posicion(4,6);
-		Posicion pos1 = new Posicion();
-		/*posInicial.setPosX(3);
-		posInicial.setPosY(0);*/
+		//Generamos una habitación
+		Habitacion habInicial = new Habitacion();
 		
-		//Generaremos los dos primeros objetos 
-		Habitacion hab1 = new Habitacion();
+		//Posicionaremos las puertas de entrada y salida
+		Posicion puertaIn = new Posicion(0,3);
+		habInicial.setPuertaEntrada(puertaIn);
+		Posicion puertaOut = new Posicion(5,Habitacion.alto-1);
+		habInicial.setPuertaSalida(puertaOut);
+		
+		//Generaremos el jugador y lo almacenaremos en la habitacion
 		Personaje jugador = new Personaje();
+		habInicial.setJugador(jugador);
 		
-		jugador.setPos(posInicial);
-		
-		Juego.PintarHabitacion(hab1);
-		
+		//Pintamos la habitacion
+		Juego.PintarHabitacion(habInicial);
 	}
 }

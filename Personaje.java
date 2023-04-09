@@ -23,7 +23,5 @@ public class Personaje {
 
 	public void setPos(Posicion pos) {
 		this.pos = pos;
-	}
-
-	
+	}	
 }
