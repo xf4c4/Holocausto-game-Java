@@ -12,8 +12,12 @@ public class Habitacion {
 	//Hacemos una copia del jugador
 	private Personaje j;
 	
-	public Habitacion() {
-		
+	
+	public Habitacion(Posicion puertaIn, Posicion puertaOut, Personaje j) {
+		this.puertaEntrada = puertaIn;
+		this.puertaSalida = puertaOut;
+		this.j = j;
+		this.j.setPos(this.puertaEntrada);
 	}
 
 	public Posicion getPuertaEntrada() {
@@ -43,12 +47,22 @@ public class Habitacion {
 	public Personaje getJugador() {
 		return j;
 	}
+	
+	public void setPersonaje(Personaje p) {
+		
+	}
 
 	public void setJugador(Personaje j) {
 		this.j = j;
-	}	
+	}
+	
 	public boolean esunaPuerta(Posicion p) {
 		if(p.esIgual(puertaEntrada) || p.esIgual(puertaSalida)) return true;
 		else return false;
+	}
+	
+	public boolean esunJugador(Posicion p) {
+		if(p.esIgual(j.getPos())) return true;
+		return false;
 	}
 }
