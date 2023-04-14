@@ -1,27 +1,19 @@
 package HolocaustoH;
 
-public class Personaje {
-	//Propiedades
-	private String nombre;
-	private Posicion pos;
-	
+public class Personaje extends ObjetoJuego{
+
 	public Personaje() {
-		System.out.println("Creación de una personaje");
+	}
+	
+	//GETTERS & SETTERS
+	public void movX(int X) {
+		Posicion pos=super.getPos();
+		pos.setPosX(pos.getPosX()+X);
+	}
+	
+	public void movY(int Y) {
+		Posicion pos=super.getPos();
+		pos.setPosY(pos.getPosY()+Y);
 	}
 
-	public String getNombre() {
-		return nombre;
-	}
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
-	public Posicion getPos() {
-		return pos;
-	}
-
-	public void setPos(Posicion pos) {
-		this.pos = pos;
-	}	
 }

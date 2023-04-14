@@ -3,16 +3,17 @@ package HolocaustoH;
 public class Posicion {
 	private int posX;
 	private int posY;
-	
-	public Posicion() {
-		this.posX = 0;
-		this.posY = 0;
-	}
-	public Posicion(int posX, int posY) {
-		this.posX = posX;
-		this.posY = posY;
-	}
 
+	public Posicion() {
+		this.posX=0;
+		this.posY=0;
+	}
+	
+	public Posicion(int posx,int posy) {
+		this.posX=posx;
+		this.posY=posy;
+	}
+	
 	public int getPosX() {
 		return posX;
 	}
@@ -30,7 +31,8 @@ public class Posicion {
 	}
 	
 	public boolean esIgual(Posicion p) {
-		if(p.posX == this.posX && p.posY == this.posY) return true;
+		if(p.posX==this.posX&&p.posY==this.posY) return true;
 		else return false;
 	}
+
 }
