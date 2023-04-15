@@ -13,10 +13,6 @@ package HolocaustoH;
 * <li>PUERTA_OUT=5
 * </ul>
 * <p>
-* 
-* @author      Paco Gomez
-* @author	   Mastermind
-* @version     1.0
 */
 public class ObjetoJuego {
 	//Tipos de ObjetoJuego
